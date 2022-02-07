@@ -19,6 +19,15 @@ var gProjs = [
         published: 'Feb 05, 2022',
         labels: ["Responsive layout ", "Storage use"],
     },
+    {
+        id: 'alien-sweeper',
+        name: 'alien-sweeper',
+        title: 'based the classic game from Microsoft',
+        desc: makeLorem(50),
+        url: 'https://guy7475.github.io/mineSweeper/',
+        published: 'Feb 05, 2022',
+        labels: ["Responsive layout ", "Storage use"],
+    },
 ]
 
 function getProjsForDisplay() {
