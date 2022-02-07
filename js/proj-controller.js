@@ -42,6 +42,15 @@ function renderModal(projId) {
     $elModal.find('.lables span').text(proj.labels);
 }
 
-function addProjectButton(projectLink) {
-    $
+function onOpenContactPage() {
+    var $elContact = $('#contact')
+    var $userEmail = $('#user-email').val()
+    var $userSubject = $('#user-subject').val()
+    var $messageBody = $('#messageBody').val()
+
+    var destination = `https://mail.google.com/mail/?view=cm&fs=1&to='${$userEmail}'&su='${$userSubject}'&body='${$messageBody}'`
+
+    $elModal.find('#submit-button').attr('href', destination);
+    
 }
+

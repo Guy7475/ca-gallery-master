@@ -17,7 +17,8 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
@@ -31,21 +32,40 @@
   </div>
   <aside class="offcanvas-aside">
 
-  <!-- Contact -->
-  <section id="contact">
-    <h4>Contact Me</h4>
-  </section>
-    
+    <!-- Contact -->
+    <section id="contact">
+      <h4>Contact Me</h4>
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="user-email" aria-describedby="emailHelp">
+
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Subject</label>
+          <input type="text" class="form-control" id="user-subject">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1">Message Body</label>
+          <textarea class="form-control" id="messageBody" rows="3"></textarea>
+        </div>
+        <a id="submit-button" href="" target="_blank">
+          <button type="button" class="btn btn-primary" onclick="onOpenContactPage()">Submit</button>
+        </a>
+      </form>
+    </section>
+
   </aside>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Meet Me</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -88,29 +108,32 @@
       <div class="row text-center">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-            </span>
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+          </span>
           <h4 class="service-heading">E-Commerce</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
+            quo inventore harum ex
             magni, dicta impedit.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-            </span>
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
           <h4 class="service-heading">Responsive Design</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
+            quo inventore harum ex
             magni, dicta impedit.</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-            </span>
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+          </span>
           <h4 class="service-heading">Web Security</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
+            quo inventore harum ex
             magni, dicta impedit.</p>
         </div>
       </div>
@@ -135,35 +158,35 @@
 
   <!-- Me -->
   <section class="bg-light" id="me" style="padding: 0px;">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/profile-pic.jpeg" alt="">
-            <h4>Guy Shimon</h4>
-            <p class="text-muted">Full Stack Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                    <i class="fa fa-linkedin"></i>
-                  </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-8 flex-align-center">
-            <p class="large text-muted  about-description">Taking my programming skills to the next level</p>    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="img/profile-pic.jpeg" alt="">
+          <h4>Guy Shimon</h4>
+          <p class="text-muted">Full Stack Developer</p>
+          <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fa fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
+      <div class="col-sm-8 flex-align-center">
+        <p class="large text-muted  about-description">Taking my programming skills to the next level</p>
+      </div>
+    </div>
   </section>
 
 
@@ -180,23 +203,23 @@
           <ul class="list-inline social-buttons flex-align-center">
             <li class="list-inline-item">
               <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
+                <i class="fa fa-twitter"></i>
+              </a>
             </li>
             <li class="list-inline-item flex-align-center">
               <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
+                <i class="fa fa-facebook"></i>
+              </a>
             </li>
             <li class="list-inline-item">
               <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
+                <i class="fa fa-linkedin"></i>
+              </a>
             </li>
           </ul>
         </div>
         <div class="col-md-4 flex-align-center">
-            <ul class="list-inline quicklinks">
+          <ul class="list-inline quicklinks">
             <li class="list-inline-item">
               <a href="#">More Me</a>
             </li>
@@ -236,8 +259,8 @@
                   <li class="lables">Lables: <span></span> </li>
                 </ul>
                 <button class="btn btn-primary" data-dismiss="modal" type="button">
-                    <i class="fa fa-times"></i>
-                    Close Project</button>
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
               </div>
             </div>
           </div>
