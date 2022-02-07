@@ -50,7 +50,7 @@ function onOpenContactPage() {
 
     var destination = `https://mail.google.com/mail/?view=cm&fs=1&to='${$userEmail}'&su='${$userSubject}'&body='${$messageBody}'`
 
-    $elModal.find('#submit-button').attr('href', destination);
+    $elContact.find('#submit-button').attr('href', destination);
     
 }
 
