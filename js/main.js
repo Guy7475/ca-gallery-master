@@ -1,1 +1,1 @@
-console.log('yay');
+'use strict'
