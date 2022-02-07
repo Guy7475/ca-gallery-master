@@ -16,7 +16,7 @@ function renderProjs() {
               <i class="fa fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+          <img class="img-fluid" src="img/portfolio/${proj.id}.jpg" alt="">
         </a>
         <div class="portfolio-caption">
           <h4>${proj.name}</h4>
@@ -35,7 +35,13 @@ function renderModal(projId) {
     var $elModal = $('.modal-body');
     $elModal.find('h2').text(proj.name);
     $elModal.find('.item-intro').text(proj.title);
+    $elModal.find('.proj-btn').attr('href',proj.url );
+    $elModal.find('.img-fluid').attr('src', `img/portfolio/${proj.id}.jpg` );
     $elModal.find('.desc').text(proj.desc);
     $elModal.find('.date span').text(proj.published);
     $elModal.find('.lables span').text(proj.labels);
+}
+
+function addProjectButton(projectLink) {
+    $
 }
