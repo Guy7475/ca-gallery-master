@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Book Shop</title>
+
+</head>
+
+
+<body onload="onInit()">
+    <div class="main-area">
+        <h1>My Book Shop</h1>
+
+        <section class="sub-header">
+            <!-- paging -->
+            <div class="paging">
+                <button class="prev-page" onclick="onPrevPage()">◀</button>
+                <span class="page-num">1</span>
+                <button class="next-page" onclick="onNextPage()">▶</button>
+            </div>
+            <!-- add books -->
+            <div class="book-input">
+                <input class="book-title-input" name="titleInput" type="text" placeholder="Book Title">
+                <input class="book-price-input" name="priceInput" type="number" placeholder="Price">
+                <button onclick="onAddBook()">Add</button>
+            </div>
+        </section>
+        <!-- books table -->
+        <table>
+            <colgroup>
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 40%;">
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 20%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <td class="id-th" onclick="onSortBy('id')">Id</td>
+                    <td onclick="onSortBy('title')">Title</td>
+                    <td onclick="onSortBy('rating')">Rating</td>
+                    <td onclick="onSortBy('price')">Price</td>
+                    <td>Actions</td>
+                    <td class="thead-img">Image</td>
+                </tr>
+            </thead>
+            <!-- books rendered here  -->
+            <tbody class="books-data">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan=5 class="books-count">Total Books: <span></span></td>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- modal with book details -->
+        <section class="modal">
+            <button onclick="onCloseModal()">Close</button>
+            <h3></h3>
+            <h4>Rating: <span></span></h4>
+            <img class="cover-img" src="" alt="">
+            <h6></h6>
+            <h5>Book Description</h5>
+            <p></p>
+        </section>
+        <div class="user-msg"></div>
+    </div>
+    <script src="js/services/book_utils_service.js"></script>
+    <script src="js/services/book_storage_service.js"></script>
+    <script src="js/services/book_service.js"></script>
+    <script src="js/book_controller.js"></script>
+
+</body>
+
+
+</html>

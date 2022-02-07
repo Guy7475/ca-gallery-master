@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&family=Yellowtail&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #5a5a5a;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.main-area {
+    position: relative;
+    min-height: 90vh;
+    max-width: 90vw;
+    margin: auto;
+    padding: 1em 5vw;
+}
+
+h1 {
+    text-align: center;
+    color: #006e8a;
+    font-family: 'Yellowtail', sans-serif;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.book-input {
+    display: inline-block
+}
+
+.book-title-input, .book-price-input {
+    max-width: 150px;
+}
+
+.paging {
+    display: inline-block;
+}
+
+.page-num {
+    margin: .2em;
+}
+
+.book-title-input, .book-price-input {
+    width: 15vw;
+}
+
+hr {
+    width: 80vw;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+tr {
+    border-bottom: 1px solid #d1d1d1;
+}
+
+td {
+    padding: .3em;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.id {
+    font-size: .7em;
+}
+
+.title {
+    font-weight: 600;
+}
+
+.button {
+    font-size: 0.7em;
+    margin: .3em;
+    cursor: pointer;
+}
+
+.td-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.book-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.cover-img {
+    height: 20vh;
+}
+
+.books-count {
+    margin: auto;
+    padding: 1em;
+    font-weight: 800;
+}
+
+.modal {
+    visibility: hidden;
+    color: azure;
+    background-color: #414141f6;
+    position: fixed;
+    padding: 1em 2em;
+    top: 5%;
+    margin: auto;
+    height: fit-content;
+    max-width: 90vw;
+    /* max-height: 80vh; */
+    text-align: center;
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.3s;
+}
+
+p {
+    text-align: justify;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+.user-msg {
+    visibility: hidden;
+    display: inline-block;
+    /* position: fixed; */
+    right: 0;
+    color: aliceblue;
+    background-color: #414141f6;
+    padding: 10px;
+}
+
+.user-msg.open {
+    visibility: visible;
+
+}
+
+.thead-img {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-area {
+        max-width: 800px;
+    }
+
+    .thead-img {
+        display: table-header-group;
+    }
+
+    .modal {
+        max-width: 50vw;
+    }
+}
