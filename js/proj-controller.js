@@ -30,6 +30,12 @@ function renderProjs() {
 }
 
 function renderModal(projId) {
-    const proj = getProjByID(projId)
-    
+    const proj = getProjByID(projId);
+
+    var $elModal = $('.modal-body');
+    $elModal.find('h2').text(proj.name);
+    $elModal.find('.item-intro').text(proj.title);
+    $elModal.find('.desc').text(proj.desc);
+    $elModal.find('.date span').text(proj.published);
+    $elModal.find('.lables span').text(proj.labels);
 }
