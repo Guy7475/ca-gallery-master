@@ -35,22 +35,21 @@ function renderModal(projId) {
     var $elModal = $('.modal-body');
     $elModal.find('h2').text(proj.name);
     $elModal.find('.item-intro').text(proj.title);
-    $elModal.find('.proj-btn').attr('href',proj.url );
-    $elModal.find('.img-fluid').attr('src', `img/portfolio/${proj.id}.jpg` );
+    $elModal.find('.proj-btn').attr('href', proj.url);
+    $elModal.find('.img-fluid').attr('src', `/img/portfolio/${proj.id}.jpg`);
     $elModal.find('.desc').text(proj.desc);
     $elModal.find('.date span').text(proj.published);
     $elModal.find('.lables span').text(proj.labels);
 }
 
 function onOpenContactPage() {
-    var $elContact = $('#contact')
-    var $userEmail = $('#user-email').val()
-    var $userSubject = $('#user-subject').val()
-    var $messageBody = $('#messageBody').val()
+    var $elContact = $('#contact');
+    var $userEmail = $('#user-email').val();
+    var $userSubject = $('#user-subject').val();
+    var $messageBody = $('#messageBody').val();
 
-    var destination = `https://mail.google.com/mail/?view=cm&fs=1&to='${$userEmail}'&su='${$userSubject}'&body='${$messageBody}'`
+    var destination = `https://mail.google.com/mail/?view=cm&fs=1&to='${$userEmail}'&su='${$userSubject}'&body='${$messageBody}'`;
 
     $elContact.find('#submit-button').attr('href', destination);
-    
 }
 
